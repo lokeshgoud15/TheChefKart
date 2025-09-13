@@ -2,8 +2,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 import MobileTop from "./MobileTop";
 import { useEffect, useState } from "react";
-import allDishes  from '../assets/alldishes.jpg'
-
+import allDishes from "../assets/alldishes.jpg";
 
 const IngredientSummary = ({ dishData }) => {
   const [currentDish, setCurrentDish] = useState(null);
@@ -27,7 +26,7 @@ const IngredientSummary = ({ dishData }) => {
       </div>
 
       <div className="mx-[-13px]  border-b border-gray-200 px-4  p-4">
-        <div className="flex ">
+        <div className="flex  justify-between ">
           <div className="w-50">
             <h2 className="text-lg font-bold text-gray-800 ">
               {currentDish?.name}

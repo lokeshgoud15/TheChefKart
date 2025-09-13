@@ -1,5 +1,4 @@
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import ing from "../assets/ing.png";
 import { Link, useParams } from "react-router-dom";
 import MobileTop from "./MobileTop";
 import { useEffect, useState } from "react";
@@ -18,7 +17,7 @@ const IngredientSummary = ({ dishData }) => {
   }, [params.id]);
 
   return (
-    <div className="w-full tracking-wide max-w-md  px-3 py-1 bg-white h-screen ">
+    <div className="w-full sm:mx-auto sm:border sm:shadow-lg tracking-wide max-w-md  px-3 py-1 bg-white h-screen ">
       <MobileTop />
       <div className="flex shadow-lg mx-[-10px] relative mt-2 px-3 py-2 items-center space-x-2 mb-4  ">
         <Link to="/" className="absolute top-6 left-3">

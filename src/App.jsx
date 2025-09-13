@@ -792,7 +792,7 @@ const App = () => {
   }, [isModalOpen]);
 
   return (
-    <div className=" relative tracking-wide  w-full px-3 py-1 sm:p-4 pb-32">
+    <div className=" relative tracking-wide  w-full px-3 py-1 sm:p-4 pb-32 bg-white min-h-screen sm:w-96 smmb-24 sm:flex sm:flex-col sm:mx-auto sm:border  ">
       <MobileTop />
 
       <Filter
@@ -821,14 +821,14 @@ const App = () => {
         ))}
       </div>
       <div className="flex items-center justify-between">
-        <p className="mt-4 font-semibold">
+        <p className="mt-4 font-semibold text-xs sm:text-base">
           {activeMealType[0] + activeMealType.slice(1).toLowerCase() + "s"}{" "}
           Selected (
           {cartList.filter((each) => each.mealType === activeMealType).length})
         </p>
-        <div className="flex mt-4 gap-3 mr-3">
+        <div className="flex mt-4 gap-3 sm:gap-3 mr-1 sm:mr-3">
           <button
-            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm px-2 py-3 rounded-lg flex items-center justify-center transition-colors `}
+            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm sm:text-sm px-2 py-3 sm:py-3 rounded-lg flex items-center justify-center transition-colors `}
             onClick={() => {
               filterItemsByType(nonvegOnly ? "ALL" : "NON-VEG");
             }}
@@ -861,17 +861,7 @@ const App = () => {
             </span>
             <span className="bg-gray-100 absolute top-2 right-[1px] w-6 h-2.5 rounded-xl"></span>
           </button>
-          {/* <button
-            className={`border h-3 border-gray-400 text-sm px-2 py-3 rounded-lg flex items-center justify-center transition-colors ${
-              allInSelectedCategory ? "bg-blue-100 border-blue-400" : "bg-white"
-            }`}
-            onClick={() => {
-              filterItemsByType("ALL");
-            }}
-            aria-label="Show All"
-          >
-            All
-          </button> */}
+         
         </div>
       </div>
 
@@ -896,16 +886,16 @@ const App = () => {
       </div>
 
       {!isModalOpen && (
-        <div className="fixed bottom-0 z-50 left-0 sm:max-w-96 bg-white flex flex-col justify-center   gap-3  w-full">
-          <div className="flex items-center justify-between bg-[#fffaf4] px-3 text-sm font-medium py-3 shadow-lg ">
-            <div className="text-xs">
+        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-full sm:w-96 max-w-full mx-auto flex flex-col items-center justify-center pt-3 sm:px-3 gap-3 bg-white shadow-lg">
+          <div className="flex items-center justify-between bg-[#fffaf4] px-3 text-sm font-medium py-3 w-full sm:w-full max-w-full mx-auto  shadow-lg ">
+            <div className="text-xs w-full mx-auto">
               Total Dishes Selected {cartList?.length}
             </div>
             <div>
               <FaChevronRight />
             </div>
           </div>
-          <div className=" font-semibold bg-black w-96 max-w-full rounded-lg text-white text-center py-2 self-center">
+          <div className="w-full font-semibold bg-black max-w-full rounded-lg text-white text-center py-2 self-center">
             Continue
           </div>
         </div>

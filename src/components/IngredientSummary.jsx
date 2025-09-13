@@ -3,7 +3,7 @@ import ing from "../assets/ing.png";
 import { Link, useParams } from "react-router-dom";
 import MobileTop from "./MobileTop";
 import { useEffect, useState } from "react";
-import allDishes  from '../assets/allDishes.jpg'
+import allDishes  from '../assets/alldishes.jpg'
 
 
 const IngredientSummary = ({ dishData }) => {

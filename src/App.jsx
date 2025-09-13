@@ -861,7 +861,6 @@ const App = () => {
             </span>
             <span className="bg-gray-100 absolute top-2 right-[1px] w-6 h-2.5 rounded-xl"></span>
           </button>
-         
         </div>
       </div>
 
@@ -895,22 +894,24 @@ const App = () => {
               <FaChevronRight />
             </div>
           </div>
-          <div className="w-full font-semibold bg-black max-w-full rounded-lg text-white text-center py-2 self-center">
+          <div className="w-full font-semibold bg-black max-w-full rounded-lg text-white mb-3 text-center py-2 self-center">
             Continue
           </div>
         </div>
       )}
-      <div
-        ref={modalRef}
-        className="fixed bottom-0 left-0 z-50 rounded-lg  shadow-2xl"
-      >
-        {isModalOpen && (
-          <IngredientModel
-            currentDish={currentDish}
-            setCartList={setCartList}
-            cartList={cartList}
-          />
-        )}
+      <div className="">
+        <div
+          ref={modalRef}
+          className="fixed bottom-0  left-0 z-50 sm:left-[50%] sm:translate-x-[-50%] w-full sm:w-96 max-w-full mx-auto flex flex-col items-center justify-center pt-3 sm:px-3 gap-3 bg-white  shadow-2xl"
+        >
+          {isModalOpen && (
+            <IngredientModel
+              currentDish={currentDish}
+              setCartList={setCartList}
+              cartList={cartList}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

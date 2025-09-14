@@ -28,7 +28,7 @@ const DetailsModel = ({ currentDish, setCartList, cartList }) => {
                   prev.filter((item) => item.id !== currentDish.id)
                 );
               }}
-              className="text-orange-500 font-semibold "
+              className="text-orange-500 font-semibold cursor-pointer "
             >
               Remove
             </button>
@@ -37,7 +37,7 @@ const DetailsModel = ({ currentDish, setCartList, cartList }) => {
               onClick={() => {
                 setCartList((prev) => [...prev, currentDish]);
               }}
-              className="text-[#73AE78]"
+              className="text-[#73AE78] cursor-pointer"
             >
               Add +
             </button>
@@ -55,7 +55,7 @@ const DetailsModel = ({ currentDish, setCartList, cartList }) => {
         className="flex items-center  gap-2"
       >
         <img src={ingredientImage} alt="" />
-        <p className="text-[#ff941a] font-medium text-sm">Ingredient</p>
+        <p className="text-[#ff941a] font-medium text-sm cursor-pointer">Ingredient</p>
       </div>
     </div>
   );

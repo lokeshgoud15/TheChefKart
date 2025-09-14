@@ -41,7 +41,7 @@ const DishCard = ({
                   setIsModalOpen(true);
                   setCurrentDish(selectedItem);
                 }}
-                className="text-gray-700"
+                className="text-gray-700 cursor-pointer"
               >
                 More
               </strong>
@@ -55,7 +55,7 @@ const DishCard = ({
             navigate(`/:${selectedItem.id}`);
           }}
         >
-          <p className="text-[#ff941a] font-medium text-xs">Ingredient</p>
+          <p className="text-[#ff941a] font-medium text-xs cursor-pointer">Ingredient</p>
         </div>
       </div>
       <div className="relative w-[140px] h-80px] bg-black rounded-lg ">
@@ -80,19 +80,19 @@ const DishCard = ({
             alt="image"
           />
         )}
-        <div className="absolute bottom-[-5px] left-0 bg-white w-full shadow-lg rounded-lg flex items-center justify-center gap-2">
+        <div className="absolute bottom-[-15px] left-5  bg-white w-24  shadow-lg rounded-lg flex items-center justify-center gap-2 cursor-pointer">
           <div className="  font-semibold border-gray-400 px-1 py-1 ">
             {cartList.some((item) => item.id === selectedItem.id) ? (
               <button
                 onClick={() => onRemoveDish(selectedItem)}
-                className="text-orange-500"
+                className="text-orange-500 cursor-pointer"
               >
                 Remove
               </button>
             ) : (
               <button
                 onClick={() => onAddDish(selectedItem)}
-                className="text-[#73AE78]"
+                className="text-[#73AE78] cursor-pointer"
               >
                 Add +
               </button>

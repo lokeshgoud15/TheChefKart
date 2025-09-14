@@ -801,7 +801,7 @@ const App = () => {
         dishData={dishData}
         activeMealType={activeMealType}
       />
-      <div className="flex flex-wrap gap-2 mt-4 ">
+      <div className="flex flex-wrap gap-2 mt-4 cursor-pointer">
         {mealTypes.map((mealType) => (
           <div
             className={` border-gray-400 tracking-wide  text-sm px-2 py-1 rounded-lg ${
@@ -828,7 +828,7 @@ const App = () => {
         </p>
         <div className="flex mt-4 gap-3 sm:gap-3 mr-1 sm:mr-3">
           <button
-            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm sm:text-sm px-2 py-3 sm:py-3 rounded-lg flex items-center justify-center transition-colors `}
+            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm sm:text-sm px-2 py-3 sm:py-3 rounded-lg flex items-center justify-center transition-colors cursor-pointer`}
             onClick={() => {
               filterItemsByType(nonvegOnly ? "ALL" : "NON-VEG");
             }}
@@ -846,7 +846,7 @@ const App = () => {
             <span className="bg-gray-100 absolute top-[8px] right-[3px] w-[20px] h-[7px] rounded-xl"></span>
           </button>
           <button
-            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm px-2 py-3 rounded-lg flex items-center justify-center transition-colors `}
+            className={`relative w-10 h-3 z-50 border border-gray-400 text-sm px-2 py-3 rounded-lg flex items-center justify-center transition-colors cursor-pointer`}
             onClick={() => {
               filterItemsByType(vegOnly ? "ALL" : "VEG");
             }}
@@ -854,7 +854,7 @@ const App = () => {
           >
             <span
               className={`${
-                vegOnly ? "absolute top-1.5 right-1" : "absolute top-1.5 left-1"
+                vegOnly ? "absolute top-1.5 right-1" : "absolute top-1.5 left-1 "
               }`}
             >
               <Veg />
@@ -886,7 +886,7 @@ const App = () => {
 
       {!isModalOpen && (
         <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-full sm:w-96 max-w-full mx-auto flex flex-col items-center justify-center pt-3 sm:px-3 gap-3 bg-white shadow-lg">
-          <div className="flex items-center justify-between bg-[#fffaf4] px-3 text-sm font-medium py-3 w-full sm:w-full max-w-full mx-auto  shadow-lg ">
+          <div className="flex items-center justify-between bg-[#fffaf4] px-3 text-sm font-medium py-3 w-full sm:w-full max-w-full mx-auto  shadow-lg cursor-pointer">
             <div className="text-xs w-full mx-auto">
               Total Dishes Selected {cartList?.length}
             </div>
@@ -894,7 +894,7 @@ const App = () => {
               <FaChevronRight />
             </div>
           </div>
-          <div className="w-full font-semibold bg-black max-w-full rounded-lg text-white mb-3 text-center py-2 self-center">
+          <div className="w-full font-semibold bg-black max-w-full rounded-lg text-white mb-3 text-center py-2 self-center cursor-pointer">
             Continue
           </div>
         </div>
